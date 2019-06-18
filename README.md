@@ -42,7 +42,7 @@ yarn start
 open http://localhost:3000
 ```
 Read the intro and next steps on localhost:3000
-Edit `src/YourComponent.js`.  
+Edit `src/componentVisualMap.js`.  
 Your changes will appear without reloading the browser.
 
 ### What do we look for?
