@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ComponentVisualMap from './components/componentVisualMap';
+import ComponentVisualFavorite from './components/componentVisualFavorite';
 import logo from './img/logo-digital-generation.png';
 import './App.css';
 
@@ -12,7 +13,9 @@ class App extends Component {
             <img src={logo} alt="Logo" />
           </nav>
         </header>
-        <ComponentVisualMap />
+        <section>
+          <ComponentVisualMap />
+        </section>
       </React.Fragment>
     );
   }

@@ -1,0 +1,9 @@
+.favorites{
+    width:500px;
+    background-color: #2C3E50;  
+}
+
+.favorites h3{
+    color:white;
+    margin-left:10px;
+}
