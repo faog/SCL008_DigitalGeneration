@@ -1,3 +1,9 @@
-.App {
-  margin: 15px;
+nav img{
+  width: 5%;    
+  margin-left:50px;
+  border-radius:30px;    
+}
+
+nav{
+  background-color: #2C3E50;    
 }
