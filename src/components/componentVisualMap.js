@@ -3,6 +3,7 @@
 /* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
 import apiKeyGoogle from '../apiKeyGoogle';
+import './css/componentVisualMap.css';
 
 class ComponentVisualMap extends Component {
   constructor(props) {
@@ -39,7 +40,7 @@ class ComponentVisualMap extends Component {
 
   render() {
     return (
-      <div style={{ width: '100%', height: '100vh' }} id="map" />
+      <section style={{ width: '100%', height: '100vh' }} id="map" />
     );
   }
 }
