@@ -22,6 +22,19 @@ class ComponentVisualMap extends Component {
         zoom: 14,
       },
     );
+    storeDirectory.map((store) => {
+      const marker = new window.google.maps.Marker({
+        position: { lat: store.Coordinates.lat, lng: store.Coordinates.lng },
+        name: store.Name,
+        title: store.Address,
+        map,
+      });
+      /*
+        marker.addListener('click',(clickedMarker)=>{
+          alert(JSON.stringify(clickedMarker));
+				})
+				*/
+    });
   }
 
   componentDidMount() {
