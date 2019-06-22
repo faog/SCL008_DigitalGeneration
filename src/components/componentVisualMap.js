@@ -5,7 +5,6 @@
 /* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
 import apiKeyGoogle from '../apiKeyGoogle';
-import './css/componentVisualMap.css';
 
 const storeDirectory = require('../store_directory.json');
 
