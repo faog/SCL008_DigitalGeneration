@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/SCL008_DigitalGeneration/static/css/main.1ea979b9.chunk.css",
+    "main.js": "/SCL008_DigitalGeneration/static/js/main.a7f12110.chunk.js",
+    "main.js.map": "/SCL008_DigitalGeneration/static/js/main.a7f12110.chunk.js.map",
+    "runtime~main.js": "/SCL008_DigitalGeneration/static/js/runtime~main.223afaef.js",
+    "runtime~main.js.map": "/SCL008_DigitalGeneration/static/js/runtime~main.223afaef.js.map",
+    "static/js/2.373ccd69.chunk.js": "/SCL008_DigitalGeneration/static/js/2.373ccd69.chunk.js",
+    "static/js/2.373ccd69.chunk.js.map": "/SCL008_DigitalGeneration/static/js/2.373ccd69.chunk.js.map",
+    "index.html": "/SCL008_DigitalGeneration/index.html",
+    "precache-manifest.e9bc7d1dadea3f8560595ff829bd5d2c.js": "/SCL008_DigitalGeneration/precache-manifest.e9bc7d1dadea3f8560595ff829bd5d2c.js",
+    "service-worker.js": "/SCL008_DigitalGeneration/service-worker.js",
+    "static/css/main.1ea979b9.chunk.css.map": "/SCL008_DigitalGeneration/static/css/main.1ea979b9.chunk.css.map",
+    "static/media/logo-digital-generation.png": "/SCL008_DigitalGeneration/static/media/logo-digital-generation.8e0c234a.png"
+  }
+}
