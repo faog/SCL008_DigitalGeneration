@@ -30,11 +30,11 @@ class ComponentVisualFavorite extends Component {
       <React.Fragment>
         <section id="mySidebar" className="sidebar">
           <a href="javascript:void(0)" className="closebtn" onClick={this.closeNav}>&times;</a>
-          <h6>Favoritos</h6>
+          <h5>Favoritos</h5>
         </section>
         <nav id="nav">
           <img src={logo} alt="Logo" />
-          <ComponentVisualButton className="openbtn" buttonOnClick={this.openNav} name="Favoritos" />
+          <ComponentVisualButton className="openbtn" buttonOnClick={this.openNav} name="FAVORITOS" />
         </nav>
 
       </React.Fragment>
