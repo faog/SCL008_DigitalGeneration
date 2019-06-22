@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ComponentVisualMap from './components/componentVisualMap';
-import ComponentVisualFavorite from './components/componentVisualFavorite';
+import ComponentVisualSideBar from './components/componentVisualSideBar';
 import './App.css';
 
 class App extends Component {
@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <header>
-          <ComponentVisualFavorite />
+          <ComponentVisualSideBar />
         </header>
         <section>
           <ComponentVisualMap />

@@ -4,10 +4,10 @@
 /* eslint-disable class-methods-use-this */
 import React, { Component } from 'react';
 import ComponentVisualButton from './componentVisualButton';
-import './css/componentVisualFavorite.css';
+import './css/componentVisualSideBar.css';
 import logo from '../img/logo-digital-generation.png';
 
-class ComponentVisualFavorite extends Component {
+class ComponentVisualSideBar extends Component {
   constructor(props) {
     super(props);
     this.openNav = this.openNav.bind(this);
@@ -53,4 +53,4 @@ class ComponentVisualFavorite extends Component {
   }
 }
 
-export default ComponentVisualFavorite;
+export default ComponentVisualSideBar;
