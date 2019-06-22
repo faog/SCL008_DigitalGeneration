@@ -30,9 +30,10 @@ class ComponentVisualMap extends Component {
       scriptApi.type = 'text/javascript';
       scriptApi.src = `https://maps.google.com/maps/api/js?key=${apiKeyGoogle}`;
       const positionScript = document.getElementsByTagName('script')[0];
-      positionScript.parentNode.insertBefore(scriptApi, positionScript);
-      // Below is important.
-      // We cannot access google.maps until it's finished loading
+      if (positionScript) {
+        positionScript.parentNode.insertBefore(scriptApi, positionScript);
+      }
+      // google.maps no se puede usar hasta que termine de ser cargado
       scriptApi.addEventListener('load', (script) => {
         this.onGoogleApiLoad();
       });
