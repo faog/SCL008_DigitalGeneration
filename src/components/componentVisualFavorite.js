@@ -15,8 +15,8 @@ class ComponentVisualFavorite extends Component {
 
   /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
   openNav() {
-    document.getElementById('mySidebar').style.width = '250px';
-    document.getElementById('nav').style.marginLeft = '250px';
+    document.getElementById('mySidebar').style.width = '300px';
+    document.getElementById('nav').style.marginLeft = '300px';
   }
 
   /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
@@ -30,7 +30,7 @@ class ComponentVisualFavorite extends Component {
       <React.Fragment>
         <section id="mySidebar" className="sidebar">
           <a href="javascript:void(0)" className="closebtn" onClick={this.closeNav}>&times;</a>
-          <h5>Favoritos</h5>
+          <h5>FAVORITOS</h5>
         </section>
         <nav id="nav">
           <img src={logo} alt="Logo" />
