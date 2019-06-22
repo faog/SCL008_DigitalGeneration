@@ -1,3 +1,4 @@
+/* eslint-disable react/destructuring-assignment */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable no-script-url */
 /* eslint-disable class-methods-use-this */
@@ -11,28 +12,38 @@ class ComponentVisualFavorite extends Component {
     super(props);
     this.openNav = this.openNav.bind(this);
     this.closeNav = this.closeNav.bind(this);
+    // Inicializar para cuando sidebar está cerrado
+    this.state = {
+      sidebarWidth: '0',
+      navMargin: '0',
+    };
   }
 
-  /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+  /* Se fija el ancho del panel lateral a 300px y el margen del contenido de la página a 300px */
   openNav() {
-    document.getElementById('mySidebar').style.width = '300px';
-    document.getElementById('nav').style.marginLeft = '300px';
+    this.setState({
+      sidebarWidth: '300px',
+      navMargin: '300px',
+    });
   }
 
-  /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+  /* Se fija el ancho del panel lateral a 0 y el margen del contenido de la página a 0 */
   closeNav() {
-    document.getElementById('mySidebar').style.width = '0';
-    document.getElementById('nav').style.marginLeft = '0';
+    this.setState({
+      sidebarWidth: '0px',
+      navMargin: '0px',
+    });
   }
 
+  // Se debe conectar los estilos al estado, para poder ser cambiados por una acción de react
   render() {
     return (
       <React.Fragment>
-        <section id="mySidebar" className="sidebar">
+        <section id="mySidebar" className="sidebar" style={{ width: this.state.sidebarWidth }}>
           <a href="javascript:void(0)" className="closebtn" onClick={this.closeNav}>&times;</a>
           <h5>FAVORITOS</h5>
         </section>
-        <nav id="nav">
+        <nav id="nav" style={{ marginLeft: this.state.navMargin }}>
           <img src={logo} alt="Logo" />
           <ComponentVisualButton className="openbtn" buttonOnClick={this.openNav} name="FAVORITOS" />
         </nav>
