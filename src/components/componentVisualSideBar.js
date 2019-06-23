@@ -3,7 +3,6 @@
 /* eslint-disable no-script-url */
 /* eslint-disable class-methods-use-this */
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import ComponentVisualButton from './componentVisualButton';
 import './css/componentVisualSideBar.css';
 import logo from '../img/logo-digital-generation.png';
@@ -54,10 +53,4 @@ class ComponentVisualSideBar extends Component {
   }
 }
 
-const mapStateToProps = state =>
-  ({ ordersFromStore: state.orders });
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(ComponentVisualSideBar);
+export default ComponentVisualSideBar;

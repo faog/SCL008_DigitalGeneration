@@ -3,6 +3,7 @@
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/prop-types */
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './css/componentVisualInfoWindow.css';
 
 class ComponentVisualInfoWindow extends Component {
@@ -45,4 +46,9 @@ class ComponentVisualInfoWindow extends Component {
   }
 }
 
-export default ComponentVisualInfoWindow;
+const mapStateToProps = state =>
+  ({ ordersFromStore: state.orders });
+
+export default connect(
+  mapStateToProps,
+)(ComponentVisualInfoWindow);
