@@ -7,6 +7,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ComponentVisualButton from './componentVisualButton';
+import { deleteMarkerToFavorites } from '../redux/actions/marker';
 import './css/componentVisualSideBar.css';
 import logo from '../img/logo-digital-generation.png';
 
@@ -79,6 +80,11 @@ const mapStateToProps = state => ({
   markersFromStore: state.markers,
 });
 
+const mapDispatchToProps = dispatch => ({
+  deleteMarkerToStore: index => dispatch(deleteMarkerToFavorites(index)),
+});
+
 export default connect(
   mapStateToProps,
+  mapDispatchToProps,
 )(ComponentVisualSideBar);
