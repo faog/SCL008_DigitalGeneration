@@ -39,6 +39,10 @@ export class ComponentVisualSideBar extends Component {
     });
   }
 
+  deleteMarker(marker) {
+    this.props.deleteMarkerToStore(marker);
+  }
+
   // Se debe conectar los estilos al estado, para poder ser cambiados por una acción de react
   render() {
     return (
@@ -58,6 +62,7 @@ export class ComponentVisualSideBar extends Component {
                 {' '}
                 {marker.Address}
               </h5>
+              <ComponentVisualButton className="btndelete" name="Eliminar" buttonOnClick={(evt) => { this.deleteMarker(index, evt); }} />
             </div>
           ))}
         </section>
