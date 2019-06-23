@@ -1,8 +1,11 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/no-array-index-key */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable no-script-url */
 /* eslint-disable class-methods-use-this */
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import ComponentVisualButton from './componentVisualButton';
 import './css/componentVisualSideBar.css';
 import logo from '../img/logo-digital-generation.png';
@@ -42,15 +45,25 @@ class ComponentVisualSideBar extends Component {
         <section id="mySidebar" className="sidebar" style={{ width: this.state.sidebarWidth }}>
           <a href="javascript:void(0)" className="closebtn" onClick={this.closeNav}>&times;</a>
           <h5>FAVORITOS</h5>
+          {this.props.markersFromStore.markers.map((marker, index) => (
+            <p key={index}>
+              {JSON.stringify(marker)}
+            </p>
+          ))}
         </section>
         <nav id="nav" style={{ marginLeft: this.state.navMargin }}>
           <img src={logo} alt="Logo" />
           <ComponentVisualButton className="openbtn" buttonOnClick={this.openNav} name="FAVORITOS" />
         </nav>
-
       </React.Fragment>
     );
   }
 }
 
-export default ComponentVisualSideBar;
+const mapStateToProps = state => ({
+  markersFromStore: state.markers,
+});
+
+export default connect(
+  mapStateToProps,
+)(ComponentVisualSideBar);
