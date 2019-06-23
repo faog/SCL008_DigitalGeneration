@@ -3,10 +3,9 @@
 /* eslint-disable no-unused-vars */
 
 import React, { Component } from 'react';
-import { connect, Provider } from 'react-redux';
+import { Provider } from 'react-redux';
 import { render } from 'react-dom';
 import store from '../redux/store';
-import { addMarkerToFavorites } from '../redux/actions/marker';
 import apiKeyGoogle from '../apiKeyGoogle';
 import ComponentVisualInfoWindow from './componentVisualInfoWindow';
 
@@ -42,7 +41,7 @@ class ComponentVisualMap extends Component {
     });
   }
 
-  /* Crea el elemento InfoWindow de googleMaps y le adjunta el
+  /* Crea el elemento InfoWindow de googleMaps y le adjunta elxz
   componentVisualInfoWindow y store de redux */
   createInfoWindow(marker, map) {
     this.infoWindow.setPosition({ lat: marker.latLng.lat(), lng: marker.latLng.lng() });
@@ -82,15 +81,4 @@ class ComponentVisualMap extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  ...state,
-});
-
-const mapDispatchToProps = dispatch => ({
-  addMarker: marker => dispatch(addMarkerToFavorites(marker)),
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(ComponentVisualMap);
+export default ComponentVisualMap;
