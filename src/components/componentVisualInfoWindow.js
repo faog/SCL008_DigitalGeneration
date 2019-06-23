@@ -3,6 +3,7 @@
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/prop-types */
 import React, { Component } from 'react';
+import './css/componentVisualInfoWindow.css';
 
 class ComponentVisualInfoWindow extends Component {
   constructor(props) {
@@ -20,19 +21,25 @@ class ComponentVisualInfoWindow extends Component {
     const markerData = this.getMarkerData(this.props.marker);
     return (
       <div id="insideinfowindow">
-        información:
-        Nombre:
-        {' '}
-        {markerData.Name}
-        Dirección:
-        {' '}
-        {markerData.Address}
-        Coordenadas:
-        {' '}
-        {markerData.Coordinates.lat}
-,
-        {' '}
-        {markerData.Coordinates.lng}
+        <h4>INFORMACIÓN TIENDA</h4>
+        <h5>
+          <strong>Nombre:</strong>
+          {' '}
+          {markerData.Name}
+        </h5>
+        <h5>
+          <strong>Dirección:</strong>
+          {' '}
+          {markerData.Address}
+        </h5>
+        <h5>
+          <strong>Coordenadas:</strong>
+          {' '}
+          {markerData.Coordinates.lat}
+          ,
+          {' '}
+          {markerData.Coordinates.lng}
+        </h5>
       </div>
     );
   }
