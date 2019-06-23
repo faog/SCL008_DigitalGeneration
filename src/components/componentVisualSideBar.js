@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable react/destructuring-assignment */
@@ -41,7 +42,9 @@ export class ComponentVisualSideBar extends Component {
   }
 
   deleteMarker(marker) {
-    this.props.deleteMarkerToStore(marker);
+    if (window.confirm('¿Está seguro que desea eliminar esta tienda de sus favoritos?')) {
+      this.props.deleteMarkerToStore(marker);
+    }
   }
 
   // Se debe conectar los estilos al estado, para poder ser cambiados por una acción de react
