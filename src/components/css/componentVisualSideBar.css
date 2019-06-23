@@ -68,6 +68,10 @@ nav img{
   margin-left:100px;
 }
 
+.sidebar p{
+  color:white;
+}
+
 @media (max-width: 700px) and (orientation:portrait) {
   #nav {
     justify-content: flex-end;

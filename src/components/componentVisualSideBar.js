@@ -47,7 +47,9 @@ class ComponentVisualSideBar extends Component {
           <h5>FAVORITOS</h5>
           {this.props.markersFromStore.markers.map((marker, index) => (
             <p key={index}>
-              {JSON.stringify(marker)}
+              {marker.Name}
+              {' '}
+              {marker.Address}
             </p>
           ))}
         </section>
