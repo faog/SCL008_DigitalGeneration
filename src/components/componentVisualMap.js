@@ -3,7 +3,10 @@
 /* eslint-disable no-unused-vars */
 
 import React, { Component } from 'react';
+import { connect, Provider } from 'react-redux';
 import { render } from 'react-dom';
+import store from '../redux/store';
+import { addMarkerToFavorites } from '../redux/actions/marker';
 import apiKeyGoogle from '../apiKeyGoogle';
 import ComponentVisualInfoWindow from './componentVisualInfoWindow';
 
@@ -25,7 +28,7 @@ class ComponentVisualMap extends Component {
         zoom: 14,
       },
     );
-    storeDirectory.map((store) => {
+    storeDirectory.map((storeMarker) => {
       const marker = new window.google.maps.Marker({
         position: { lat: store.Coordinates.lat, lng: store.Coordinates.lng },
         name: store.Name,
@@ -72,4 +75,15 @@ class ComponentVisualMap extends Component {
   }
 }
 
-export default ComponentVisualMap;
+const mapStateToProps = state => ({
+  ...state,
+});
+
+const mapDispatchToProps = dispatch => ({
+  addMarker: marker => dispatch(addMarkerToFavorites(marker)),
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(ComponentVisualMap);
