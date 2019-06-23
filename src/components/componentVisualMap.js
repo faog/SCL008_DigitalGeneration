@@ -1,20 +1,23 @@
-/* eslint-disable no-tabs */
-/* eslint-disable array-callback-return */
 /* eslint-disable react/sort-comp */
-/* eslint-disable class-methods-use-this */
+/* eslint-disable array-callback-return */
 /* eslint-disable no-unused-vars */
+
 import React, { Component } from 'react';
+import { render } from 'react-dom';
 import apiKeyGoogle from '../apiKeyGoogle';
+import ComponentVisualInfoWindow from './componentVisualInfoWindow';
 
 const storeDirectory = require('../store_directory.json');
 
 class ComponentVisualMap extends Component {
   constructor(props) {
     super(props);
+    this.infoWindow = {};
     this.onGoogleApiLoad = this.onGoogleApiLoad.bind(this);
   }
 
   onGoogleApiLoad() {
+    this.infoWindow = new window.google.maps.InfoWindow({ content: '<div id="infowindow" />' });
     const map = new window.google.maps.Map(
       document.getElementById('map'),
       {
@@ -29,12 +32,19 @@ class ComponentVisualMap extends Component {
         title: store.Address,
         map,
       });
-      /*
-        marker.addListener('click',(clickedMarker)=>{
-          alert(JSON.stringify(clickedMarker));
-				})
-				*/
+
+      marker.addListener('click', (clickedMarker) => {
+        this.createInfoWindow(clickedMarker, map);
+      });
     });
+  }
+
+  createInfoWindow(marker, map) {
+    this.infoWindow.setPosition({ lat: marker.latLng.lat(), lng: marker.latLng.lng() });
+    this.infoWindow.addListener('domready', (evt) => {
+      render(<ComponentVisualInfoWindow marker={marker} storeDirectory={storeDirectory} />, document.getElementById('infowindow'));
+    });
+    this.infoWindow.open(map);
   }
 
   componentDidMount() {
