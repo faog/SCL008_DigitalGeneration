@@ -10,7 +10,8 @@ import ComponentVisualButton from './componentVisualButton';
 import './css/componentVisualSideBar.css';
 import logo from '../img/logo-digital-generation.png';
 
-class ComponentVisualSideBar extends Component {
+// export, permite probar el componente sin redux
+export class ComponentVisualSideBar extends Component {
   constructor(props) {
     super(props);
     this.openNav = this.openNav.bind(this);
