@@ -42,10 +42,17 @@ class ComponentVisualMap extends Component {
     });
   }
 
+  /* Crea el elemento InfoWindow de googleMaps y le adjunta el
+  componentVisualInfoWindow y store de redux */
   createInfoWindow(marker, map) {
     this.infoWindow.setPosition({ lat: marker.latLng.lat(), lng: marker.latLng.lng() });
     this.infoWindow.addListener('domready', (evt) => {
-      render(<ComponentVisualInfoWindow marker={marker} storeDirectory={storeDirectory} />, document.getElementById('infowindow'));
+      render(
+        <Provider store={store}>
+          <ComponentVisualInfoWindow marker={marker} storeDirectory={storeDirectory} />
+        </Provider>,
+        document.getElementById('infowindow'),
+      );
     });
     this.infoWindow.open(map);
   }
