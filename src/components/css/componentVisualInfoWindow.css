@@ -11,7 +11,35 @@
   font-weight: 400;
   color:#212121;
 }
+
 #insideinfowindow h5 strong{  
   font-weight: 500;
   color:#212121;
 }
+
+.btnadd{
+  background-color:#2962FF;
+  border:none;
+  border-radius:10px;
+  width:150px;
+  height:30px;
+  color:white;
+  font-size:14px;
+  display: block;
+  float: right;
+}
+
+.btnadd:hover{
+  background-color:#0D47A1;
+  color:white;
+  font-weight: bold; 
+}
+
+@media (max-width: 700px) and (orientation:portrait) {
+  .btnadd{
+    display: block;
+    float: left;
+  }
+}
+
+

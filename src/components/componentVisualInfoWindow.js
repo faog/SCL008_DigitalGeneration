@@ -47,7 +47,7 @@ class ComponentVisualInfoWindow extends Component {
           {' '}
           {markerData.Coordinates.lng}
         </h5>
-        <ComponentVisualButton name="Agregar a favoritos" buttonOnClick={(evt) => { this.addMarker(markerData, evt); }} />
+        <ComponentVisualButton className="btnadd" name="Agregar a favoritos" buttonOnClick={(evt) => { this.addMarker(markerData, evt); }} />
       </div>
     );
   }
