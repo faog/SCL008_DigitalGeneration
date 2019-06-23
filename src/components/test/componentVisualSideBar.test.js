@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 import React from 'react';
 import { configure, mount } from 'enzyme';
@@ -33,5 +34,16 @@ describe('ComponentVisualSideBar', () => {
     component.find('.closebtn').simulate('click');
     expect(component.state().sidebarWidth).toBe('0px');
     expect(component.state().navMargin).toBe('0px');
+  });
+
+  it('Debería eliminar un elemento del store', () => {
+    const deleteMarkerToStore = jest.fn(_index => (true));
+    window.confirm = jest.fn(_message => (true));
+    const component = mount(<ComponentVisualSideBar
+      markersFromStore={{ markers: [marker] }}
+      deleteMarkerToStore={deleteMarkerToStore}
+    />);
+    component.find({ className: 'btndelete', name: 'Eliminar' }).simulate('click');
+    expect(deleteMarkerToStore).toHaveBeenCalled();
   });
 });
