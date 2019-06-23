@@ -47,11 +47,18 @@ export class ComponentVisualSideBar extends Component {
           <a href="javascript:void(0)" className="closebtn" onClick={this.closeNav}>&times;</a>
           <h5>FAVORITOS</h5>
           {this.props.markersFromStore.markers.map((marker, index) => (
-            <p key={index}>
-              {marker.Name}
-              {' '}
-              {marker.Address}
-            </p>
+            <div className="favoritedata" key={index}>
+              <h5>
+                <strong>Nombre:</strong>
+                {' '}
+                {marker.Name}
+              </h5>
+              <h5>
+                <strong>Dirección:</strong>
+                {' '}
+                {marker.Address}
+              </h5>
+            </div>
           ))}
         </section>
         <nav id="nav" style={{ marginLeft: this.state.navMargin }}>
