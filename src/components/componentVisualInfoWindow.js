@@ -8,7 +8,7 @@ import { addMarkerToFavorites } from '../redux/actions/marker';
 import ComponentVisualButton from './componentVisualButton';
 import './css/componentVisualInfoWindow.css';
 
-class ComponentVisualInfoWindow extends Component {
+export class ComponentVisualInfoWindow extends Component {
   constructor(props) {
     super(props);
     this.getMarkerData = this.getMarkerData.bind(this);

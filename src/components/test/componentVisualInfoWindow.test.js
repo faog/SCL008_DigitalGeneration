@@ -1,9 +1,10 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 import React from 'react';
 import { configure, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import createGoogleMapsMock from 'jest-google-maps-mock';
-import ComponentVisualInfoWindow from '../componentVisualInfoWindow';
+import { ComponentVisualInfoWindow } from '../componentVisualInfoWindow';
 
 const storeDirectory = require('../../store_directory');
 
@@ -25,5 +26,16 @@ describe('ComponentVisualInfoWindow', () => {
       marker={marker}
     />);
     expect(component.exists()).toBe(true);
+  });
+
+  it('Deberia agregar un marcador a favoritos', () => {
+    const addMarkerToStore = jest.fn(_marker => (true));
+    const component = mount(<ComponentVisualInfoWindow
+      marker={marker}
+      storeDirectory={storeDirectory}
+      addMarkerToStore={addMarkerToStore}
+    />);
+    component.find({ className: 'btnadd', name: 'Agregar a favoritos' }).simulate('click');
+    expect(addMarkerToStore).toHaveBeenCalled();
   });
 });
