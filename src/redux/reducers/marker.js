@@ -12,7 +12,7 @@ export default (
       // Evitar que se añada una tienda repetida en los favoritos
       if (state.markers.find(marker => marker.Coordinates.lat === action.marker.Coordinates.lat
         && marker.Coordinates.lng === action.marker.Coordinates.lng)) {
-        alert('Este store ya se encuentra en favoritos');
+        alert('Esta tienda ya se encuentra guardada en favoritos.');
         return state;
       }
       return {
