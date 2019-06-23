@@ -23,17 +23,17 @@ class ComponentVisualInfoWindow extends Component {
       <div id="insideinfowindow">
         <h4>INFORMACIÓN TIENDA</h4>
         <h5>
-          Nombre:
+          <strong>Nombre:</strong>
           {' '}
           {markerData.Name}
         </h5>
         <h5>
-          Dirección:
+          <strong>Dirección:</strong>
           {' '}
           {markerData.Address}
         </h5>
         <h5>
-          Coordenadas:
+          <strong>Coordenadas:</strong>
           {' '}
           {markerData.Coordinates.lat}
           ,

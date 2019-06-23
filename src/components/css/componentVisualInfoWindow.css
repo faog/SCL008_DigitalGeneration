@@ -1,13 +1,17 @@
 #insideinfowindow h4{
-    font-size:18px;
-    margin:5px auto;
-    font-weight: 500;
-    color:#212121;
+  font-size:18px;
+  margin:5px auto;
+  font-weight: 500;
+  color:#212121;
 }
 
 #insideinfowindow h5{
-    font-size:14px;
-    margin:5px auto;
-    font-weight: 400;
-    color:#212121;
+  font-size:14px;
+  margin:5px auto;
+  font-weight: 400;
+  color:#212121;
+}
+#insideinfowindow h5 strong{  
+  font-weight: 500;
+  color:#212121;
 }
