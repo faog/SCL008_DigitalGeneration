@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 import { ADD_TO_FAVORITES, DELETE_TO_FAVORITES } from '../actions/actionTypes';
 
 export default (
@@ -11,6 +12,7 @@ export default (
       // Evitar que se añada una tienda repetida en los favoritos
       if (state.markers.find(marker => marker.Coordinates.lat === action.marker.Coordinates.lat
         && marker.Coordinates.lng === action.marker.Coordinates.lng)) {
+        alert('Este store ya se encuentra en favoritos');
         return state;
       }
       return {
