@@ -30,9 +30,9 @@ class ComponentVisualMap extends Component {
     );
     storeDirectory.map((storeMarker) => {
       const marker = new window.google.maps.Marker({
-        position: { lat: store.Coordinates.lat, lng: store.Coordinates.lng },
-        name: store.Name,
-        title: store.Address,
+        position: { lat: storeMarker.Coordinates.lat, lng: storeMarker.Coordinates.lng },
+        name: storeMarker.Name,
+        title: storeMarker.Address,
         map,
       });
 
