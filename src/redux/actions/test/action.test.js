@@ -26,4 +26,17 @@ describe('actions', () => {
     const actionsFromStore = store.getActions();
     expect(actionsFromStore).toEqual([expectedAction]);
   });
+
+  it('Crear la acción de eliminar un producto ', () => {
+    const initialState = {};
+    const store = mockStore(initialState);
+    const index = 1;
+    const expectedAction = {
+      type: types.DELETE_TO_FAVORITES,
+      index,
+    };
+    store.dispatch(actions.deleteMarkerToFavorites(index));
+    const actionsFromStore = store.getActions();
+    expect(actionsFromStore).toEqual([expectedAction]);
+  });
 });
