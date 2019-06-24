@@ -21,7 +21,7 @@
   background-color:#2962FF;
   border:none;
   border-radius:10px;
-  width:180px;
+  width:160px;
   height:30px;
   color:white;
   font-size:14px;
@@ -40,6 +40,7 @@
   .btnadd{
     display: block;
     float: left;
+    font-size:13px;
   }
 }
 
