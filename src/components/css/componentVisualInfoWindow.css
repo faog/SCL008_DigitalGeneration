@@ -45,3 +45,21 @@
 }
 
 
+@media (max-width: 700px) and (orientation:landscape) {
+  #insideinfowindow h4{
+    font-size:16px;
+    margin:2px auto;
+  }
+  
+  #insideinfowindow h5{
+    font-size:14px;
+    margin:2px auto;
+  }
+
+  .btnadd{
+    font-size:12px;
+  }
+
+}
+
+
