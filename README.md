@@ -1,13 +1,13 @@
 # Desafío: Tiendas en México 📌🏪🌎
 
 ## Preámbulo
-Este corresponde al desarrollo de un "Code Challenge", que permite visualizar un mapa de google maps con información de distintas tiendas, colocando estos "stores" en forma de markers de Google Maps. Además, es posible realizar otras funcionalidades, como agregar estos stores a favoritos y eliminarlos de esta lista.
+Este corresponde al desarrollo de un "Code Challenge", que permite visualizar un mapa de google maps con información de distintas tiendas de México, colocando estos "stores" en forma de markers de Google Maps. Además, es posible realizar otras funcionalidades como agregar estos stores a favoritos y eliminarlos de la lista.
 
-Para la [solución](https://faog.github.io/SCL008_DigitalGeneration/), hizo consumo de la api de google maps y Javascript, usando la librería React.
+Para la [solución](https://faog.github.io/SCL008_DigitalGeneration/), se desarrolló usando javascript, usando la librería React y consumo de la api de google maps.
 
 ## Planificación 🚀
 
-Para su implementación, este proyecto fue planificado en [aquí](https://trello.com/b/Xm5MO5uo/desaf%C3%ADo-digital-generation), utilizando planning póker para la estimación del tiempo y complejidad de las distintas tareas desarrolladas. 
+Para su implementación, este proyecto fue planificado en [trello](https://trello.com/b/Xm5MO5uo/desaf%C3%ADo-digital-generation), utilizando planning póker para la estimación del tiempo y complejidad de las distintas tareas desarrolladas. 
 
 ## Criterios de aceptación del proyecto
 
@@ -15,11 +15,11 @@ Para su implementación, este proyecto fue planificado en [aquí](https://trello
 
 A partir de la información obtenida del desafío, es necesario implementar 4 historias de usuario que describen las necesidades de los usuarios, buscando cubrirlas a partir de los criterios de terminado y los criterios de aceptación que se desarrollan en cada una de ellas.
 
-Además, es necesario considerar que toda la aplicación debe considerar los siguientes factores:
+Además, es necesario que la aplicación considere los siguientes factores:
 
-- **Correctitud:** La solución propuesta, responde a lo solicitado por el usuario.
+- **Correctitud:** la solución propuesta responde a lo solicitado por el usuario.
 - **Calidad del código:** código entendible y mantenible en el tiempo.
-- **Experiencia de usuario:** Interfaz de usuario amigable e intuitiva.
+- **Experiencia de usuario:** interfaz de usuario amigable e intuitiva.
 
 #### HU1: Visualizar el mapa de google maps
 Como un estudiante, quiero ver un mapa de la ciudad de México para poder observar lugares de mi interés.
@@ -28,8 +28,7 @@ Como un estudiante, quiero ver un mapa de la ciudad de México para poder observ
 
   * Ver el mapa de google maps en la aplicación.
   * Ver una barra superior con las opciones de la aplicación.
-  * Al seleccionar el botón favoritos, que se despliegue un menú con estos marcadores.
-
+  * Al seleccionar el botón favoritos, se despliegue un menú con mis favoritos.
 
 #### HU2: Visualizar en el mapa los marcadores de tiendas
 Como un estudiante, quiero ver un mapa que tenga todos los stores representados como marcadores en el mapa para poder encontrarlos.
