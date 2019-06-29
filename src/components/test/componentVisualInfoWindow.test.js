@@ -30,10 +30,13 @@ describe('ComponentVisualInfoWindow', () => {
 
   it('Deberia agregar un marcador a favoritos', () => {
     const addMarkerToStore = jest.fn(_marker => (true));
+    const infoWindow = jest.fn();
+    infoWindow.close = jest.fn();
     const component = mount(<ComponentVisualInfoWindow
       marker={marker}
       storeDirectory={storeDirectory}
       addMarkerToStore={addMarkerToStore}
+      infoWindow={infoWindow}
     />);
     component.find({ className: 'btnadd', name: 'Agregar a favoritos' }).simulate('click');
     expect(addMarkerToStore).toHaveBeenCalled();
