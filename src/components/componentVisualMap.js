@@ -1,3 +1,4 @@
+/* eslint-disable import/no-named-as-default */
 /* eslint-disable react/sort-comp */
 /* eslint-disable array-callback-return */
 /* eslint-disable no-unused-vars */
@@ -5,9 +6,9 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { render } from 'react-dom';
+import ComponentVisualInfoWindow from './componentVisualInfoWindow';
 import store from '../redux/store';
 import apiKeyGoogle from '../apiKeyGoogle';
-import ComponentVisualInfoWindow from './componentVisualInfoWindow';
 
 const storeDirectory = require('../store_directory.json');
 
@@ -41,14 +42,18 @@ class ComponentVisualMap extends Component {
     });
   }
 
-  /* Crea el elemento InfoWindow de googleMaps y le adjunta elxz
+  /* Crea el elemento InfoWindow de googleMaps y le adjunta el
   componentVisualInfoWindow y store de redux */
   createInfoWindow(marker, map) {
     this.infoWindow.setPosition({ lat: marker.latLng.lat(), lng: marker.latLng.lng() });
     this.infoWindow.addListener('domready', (evt) => {
       render(
         <Provider store={store}>
-          <ComponentVisualInfoWindow marker={marker} storeDirectory={storeDirectory} />
+          <ComponentVisualInfoWindow
+            marker={marker}
+            storeDirectory={storeDirectory}
+            infoWindow={this.infoWindow}
+          />
         </Provider>,
         document.getElementById('infowindow'),
       );

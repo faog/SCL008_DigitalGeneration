@@ -22,6 +22,7 @@ export class ComponentVisualInfoWindow extends Component {
 
   addMarker(marker) {
     this.props.addMarkerToStore(marker);
+    this.props.infoWindow.close();
   }
 
   render() {
