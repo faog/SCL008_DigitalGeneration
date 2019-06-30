@@ -19,6 +19,9 @@ class ComponentVisualMap extends Component {
     this.onGoogleApiLoad = this.onGoogleApiLoad.bind(this);
   }
 
+  /* Se ejecuta luego que se termina de cargar la libreria de google, creando el elemento mapa (Map)
+  Crea el elemento InfoWindow vacío
+  Recorre el archivo Json y carga los marcadores (marker) */
   onGoogleApiLoad() {
     this.infoWindow = new window.google.maps.InfoWindow({ content: '<div id="infowindow" />' });
     const map = new window.google.maps.Map(
@@ -43,7 +46,10 @@ class ComponentVisualMap extends Component {
   }
 
   /* Crea el elemento InfoWindow de googleMaps y le adjunta el
-  componentVisualInfoWindow y store de redux */
+  componentVisualInfoWindow y store de redux
+  - setPosition() mueve el infoWindow vacío a la posición del marcador seleccionado
+  - domready se ejecuta luego que el infowindow se mueve la posicion del marcador seleccionado,
+  - dando la acción de imprimir la información del marcador en el infowindow */
   createInfoWindow(marker, map) {
     this.infoWindow.setPosition({ lat: marker.latLng.lat(), lng: marker.latLng.lng() });
     this.infoWindow.addListener('domready', (evt) => {
@@ -61,6 +67,10 @@ class ComponentVisualMap extends Component {
     this.infoWindow.open(map);
   }
 
+  /* Proceso asincrono, que se ejecuta cuando el componente está listo, permitiendo
+  iniciar la carga del script de google maps
+  crea un elemento script en el html, asociando el tipo y ruta
+  posteriormente, inserta el elemento en el tag creado */
   componentDidMount() {
     if (!window.google) {
       const scriptApi = document.createElement('script');
