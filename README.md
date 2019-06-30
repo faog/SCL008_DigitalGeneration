@@ -5,11 +5,11 @@ Este corresponde al desarrollo de un "Code Challenge" que permite visualizar un 
 
 Para la [solución](https://faog.github.io/SCL008_DigitalGeneration/), se desarrolló usando javascript, usando la librería React y consumo de la api de google maps.
 
-## Planificación 🚀
+### Planificación 🚀
 
 Para su implementación, este proyecto fue planificado en [trello](https://trello.com/b/Xm5MO5uo/desaf%C3%ADo-digital-generation), utilizando planning póker para la estimación del tiempo y complejidad de las distintas tareas desarrolladas. 
 
-## Criterios de aceptación del proyecto
+### Criterios de aceptación del proyecto
 
 ### Definición del producto
 
@@ -64,7 +64,7 @@ Los criterios de aceptación son iguales para las cuatro historias, siendo los s
   - Código entendible y que cualquier desarrollador pueda acceder a este.
   - Desplegar la aplicación y etiquetar la versión desplegada (git tag).
 
-## Prototipo ✏️
+### Prototipo ✏️
 
 Una vez reconocido el usuario, comienza el proceso creativo de prototipo de baja fidelidad, destacando las principales vistas:
 
