@@ -80,8 +80,8 @@ Una vez reconocido el usuario, comienza el proceso creativo de prototipo de baja
 **Implementación de la interfaz**
 
 * Creación de componentes, reutilizables en el desarrollo de la aplicación.
-* Para guardar los marcadores de la aplicación, se usó [local storage](https://developer.mozilla.org/es/docs/Web/API/Window/localStorage) que corresponde a un almacenamiento en el navegador.
 * Instalación de [redux](https://es.redux.js.org/) para manejar los estados de las tiendas.
+* Para guardar las tiendas seleccionadas se usó [local storage](https://developer.mozilla.org/es/docs/Web/API/Window/localStorage), almacenando esta información en el navegador.
 * Test a la aplicación, como es el caso de los componentes creados y a las acciones de redux.
 * Integración continúa usando [Travis](https://travis-ci.com/faog/SCL008_DigitalGeneration).
 * Manejo de estilos CSS pensado en mobile first y desktop.
